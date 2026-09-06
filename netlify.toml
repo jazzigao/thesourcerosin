@@ -1,0 +1,15 @@
+[build]
+  command = "pnpm install --frozen-lockfile && PORT=3000 BASE_PATH=/ pnpm --filter @workspace/the-source-website build"
+  publish = "apps/the-source-website/dist/public"
+
+# If the API is hosted separately, replace the placeholder and uncomment this block.
+# [[redirects]]
+#   from = "/api/*"
+#   to = "https://api.your-domain.example/api/:splat"
+#   status = 200
+#   force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
