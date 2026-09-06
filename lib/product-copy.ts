@@ -1,23 +1,21 @@
-import type { Product } from '@workspace/api-client-react';
+import type { Product } from "@workspace/api-client-react";
 
 const EXPERIENCE_NOTES: Record<string, string> = {
-  'gak-smoovie':
-    'Inhale opens with ripe melon, berry skin, and a ribbon of cream. The onset is bright and happy without rushing you. On the exhale, citrus turns soft and floral; relaxation arrives as a silky, contented finish.',
-  'high-fructose-corn-syrup':
-    'Inhale sweet candy, berry syrup, and hot gas with a savory GMO edge. The onset is warm, euphoric, and appetite-bright. Exhale pulls through diesel, pine, and dark earth, leaving a grounded relaxation that lingers.',
+  "gak-smoovie":
+    "Inhale: bright melon, ripe berry, and a ribbon of creamy citrus. Onset: quick, clear, and quietly happy. Flavor transition: the fruit folds into soft pastry and light earth. Exhale: berry skin and spice linger with a relaxed, easygoing mood.",
+  "high-fructose-corn-syrup":
+    "Inhale: sweet candy, cream, and hot gas with a savory GMO edge. Onset: warm happiness arrives fast, then settles behind the eyes. Flavor transition: syrupy fruit gives way to pine, diesel, and damp earth. Exhale: a full, slow relaxation built for an unhurried evening.",
   gmo:
-    'Inhale garlic, pepper, and chemical fuel; the onset is bold, happy, and immediate. Exhale turns earthy and dense, with a faint creaminess beneath the gas, easing into deep evening relaxation.',
+    "Inhale: garlic, cracked pepper, and chemical fuel. Onset: immediate, bright, and euphoric with a focused first lift. Flavor transition: the sharp gas rounds into roasted earth and umami. Exhale: heavy soil, diesel, and a long, deeply relaxing finish.",
   fizz:
-    'Inhale strawberry, vanilla cream, and guava arrive like a bright first note. The onset feels buoyant and creative. On the exhale, berry cake melts into tropical fruit and a mellow, happy calm.',
-  'ogkb-melonade':
-    'Inhale creamy cookie funk, sweet melon, and lemon peel; the start is clear, social, and uplifted. Flavor transitions into fuel and soft citrus on the exhale, then settles into earthy, full-body relaxation.',
-  'organic-flower':
-    'Inhale fresh berry, pine, and damp earth from the whole flower; the onset is calm, happy, and unhurried. Exhale carries a soft creaminess through the greenery, with a clean, grounding relaxation at the finish.',
+    "Inhale: strawberry cake, vanilla cream, and guava. Onset: sparkling, happy, and creatively buoyant. Flavor transition: tropical fruit opens into soft berry custard with a faint floral edge. Exhale: creamy fruit and mellow euphoria, leaving the body loose but light.",
+  "ogkb-melonade":
+    "Inhale: creamy cookie funk, lemon peel, and sweet melon. Onset: clear, lifted, and conversational. Flavor transition: citrus turns to ripe melon before a thread of diesel and gas appears. Exhale: earthy warmth and a fuller, deeply relaxed finish.",
 };
 
 export function getExperienceNotes(product: Product) {
   return (
     EXPERIENCE_NOTES[product.id] ??
-    'A small-batch expression with a gentle aromatic opening, layered flavor through the inhale, and a clean lingering finish.'
+    "Inhale: a gentle aromatic opening. Onset: measured and clear. Flavor transition: layered fruit, cream, earth, or fuel as the cultivar opens. Exhale: a clean, lingering finish with an easy, settled mood."
   );
 }
